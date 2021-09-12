@@ -3,8 +3,10 @@
 
 var authenticated=true;
 
-if(authenticated){
-    console.log("Show singout button");
-}else{
-    console.log("Show Login Options");
-}
+// if(authenticated){
+//     console.log("Show signout button");
+// }else{
+//     console.log("Show Login Options");
+// }
+
+authenticated ? console.log("Show signout button"):console.log("Show login options");
