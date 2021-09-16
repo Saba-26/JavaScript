@@ -4,4 +4,4 @@ function sayHello(name) {
 }
 
 sayHello("saba");
-sayHello("SANA");
+sayHello("sana");
