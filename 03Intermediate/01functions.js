@@ -5,3 +5,12 @@ function sayHello(name) {
 
 sayHello("saba");
 sayHello("sana");
+
+function hello(){
+    return "Hello World!!";
+}
+
+var greetings=hello();
+
+console.log(greetings);
+console.log(hello());
