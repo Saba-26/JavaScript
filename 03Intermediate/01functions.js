@@ -13,4 +13,4 @@ function hello(){
 var greetings=hello();
 
 console.log(greetings);
-console.log(hello);
+console.log(hello());

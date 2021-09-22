@@ -15,7 +15,7 @@ function getUserRole(name,role) {
         case "admin":
             return `${name} is admin with all access `;
             break;
-        case "admin":
+        case "sub-admin":
             return `${name} is sub-admin with access to create/delete courses `;
             break;
         case "testprep":
@@ -29,3 +29,8 @@ function getUserRole(name,role) {
             break;
     }
 }
+
+console.log(getUserRole("saba","admin"));
+
+var getRole=(getUserRole("sammy","user"));
+console.log(getRole);
