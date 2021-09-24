@@ -2,7 +2,7 @@
 //     console.log(i);
 // }
 
-const myStates = ["Rajasthan","New Delhi","Assam",1947,"Goa","Karnataka","Maharastra"];
+// const myStates = ["Rajasthan","New Delhi","Assam",1947,"Goa","Karnataka","Maharastra"];
 
 
 // for(let i=0;i<myStates.length;i++){
@@ -21,4 +21,14 @@ const myStates = ["Rajasthan","New Delhi","Assam",1947,"Goa","Karnataka","Mahara
 
 console.log("--------WHILE & DO-WHILE LOOP--------");
 
-
+const myStates = ["Rajasthan","New Delhi","Assam",1947,"Goa","Karnataka","Maharastra"];
+// let i=0;
+// while(i<myStates.length){
+//     console.log(myStates[i]);
+//     i++;
+// }
+let i=0;
+do{
+    console.log(myStates[i]);
+     i++;
+}while(i<myStates.length)
