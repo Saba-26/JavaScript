@@ -5,73 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="static.css">
 </head>
 <body>
-    <header>
-        <ul>
-            <li><a href="#home">Speaker</a></li>
-            <li><a href="#news">Venue</a></li>
-            <li><a href="#contact">Schedule</a></li>
-            <!-- <li><a href="#about"></a></li> -->
-          </ul>
-    </header>
-    <main>
-    <form>  
-        <div class="container">  
-        <center>  <h1> Conference Event Registeration Form</h1> </center>  
-        <hr>  
-        <label> Firstname </label>   
-      <input type="text" name="firstname" placeholder= "Firstname" size="15" required />   
-      <label> Middlename: </label>   
-      <input type="text" name="middlename" placeholder="Middlename" size="15" required />   
-      <label> Lastname: </label>    
-      <input type="text" name="lastname" placeholder="Lastname" size="15"required />    
-      <div>  
-        Add Events: <br>    
-        <input type="checkbox" id="speech" name="speech" value="speech"/>    
-           <label>Speech</label> <br>    
-        <input type="checkbox" id="PP" name="PP" value="PP"/>    
-           <label>Paper Presentation</label> <br>    
-        <input type="checkbox" id="Event3" name="Event3" value="Event3"/>    
-           <label>Event 3</label> <br>  
-      <label>  <br><br>
-      Gender :  
-      </label><br>  
-      <input type="radio" value="Male" name="gender" checked > Male   
-      <input type="radio" value="Female" name="gender"> Female   
-      <input type="radio" value="Other" name="gender"> Other  
-        
-      </div>  
-      <label>   
-      Phone :  
-      </label>  
-      <input type="text" name="phone" placeholder="phone no." size="10"/ required>   
-      Current Address :  
-      <textarea cols="80" rows="5" placeholder="Current Address" value="address" required>  
-      </textarea>  
-       <label for="email"><b>Email</b></label>  
-       <input type="text" placeholder="Enter Email" name="email" required>  
-        
-          <label for="psw"><b>Password</b></label>  
-          <input type="password" placeholder="Enter Password" name="psw" required>  
-        
-          <label for="psw-repeat"><b>Re-type Password</b></label>  
-          <input type="password" placeholder="Retype Password" name="psw-repeat" required>  
-          <button type="submit" class="registerbtn">Register</button>    
-      </form>        
-    </main>
+    <table>
+        <tr>
+            <th>Enter 1st Number:</th>
+            <td><input type="number" name="num1" id="num1"/></td>
+        </tr>
 
-    <footer class="footer">
-        <div class="footer-header">Connect Me</div>
-        <ul class="social-links list-non-bullet">
-            <li class="list-item-inline">
-                <a href="https://www.linkedin.com">LinkedIn</a>
-            </li>
-            <li class="list-item-inline">
-                <a href="https://github.com">GitHub</a>
-            </li>
-        </ul>
-    </footer>
+        <tr>
+            <th>Enter 2nd Number:</th>
+            <td><input type="number" name="num2" id="num2"/></td>
+        </tr>
+
+        <tr>
+            <th colspan="2">
+                <input type="button" value="+" onclick="performop(this.value);"/>
+                <input type="button" value="-" onclick="performop(this.value);"/>
+            </th>
+        </tr>
+
+        <tr>
+            <th>Result</th>
+            <td><input type="number" name="res" id="res"/></td>
+        </tr>
+    </table>
+    <script>
+        function performop(op){
+            var n1=parseInt(document.getElementById("num1").value);
+            var n2=parseInt(document.getElementById("num2").value);
+            result=0;
+            if(op=="+")
+            {
+                result=n1+n2;
+            }
+            if(op=="-")
+            {
+                result=n1-n2;
+            }
+            document.getElementById("res").value=result;
+        }
+    </script>
 </body>
 </html>
